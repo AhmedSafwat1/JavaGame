@@ -7,12 +7,15 @@ package gamejava;
 
 import java.io.IOException;
 import java.net.URL;
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
 import java.util.EventObject;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -60,6 +63,7 @@ public class HomeController implements Initializable {
     private String WinnerName="";
     public String playerlogin = "User";
     public String playerfriend = "Unknown";
+<<<<<<< HEAD
     public int id_user=0;
     // databse
     public Connection con;
@@ -85,6 +89,8 @@ public class HomeController implements Initializable {
  
         alert.showAndWait();
     }
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     @FXML
     private void goPc(ActionEvent event)
     {
@@ -94,11 +100,14 @@ public class HomeController implements Initializable {
              x.setLocation(getClass().getResource("FXMLDocument.fxml"));
              Parent root = x.load();
              FXMLDocumentController c = x.getController();
+<<<<<<< HEAD
              System.out.println(id_user);
               System.out.println(playerlogin);
              c.u_id =id_user;
              c.playerName1 = playerlogin;
             // System.out.println(id_user);
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
              Alert alert = new Alert(AlertType.CONFIRMATION);
             alert.setTitle("Want To Recod The Game");
             alert.setHeaderText("Record the game to watch Later");
@@ -109,7 +118,10 @@ public class HomeController implements Initializable {
                 // ... user chose OK
                 c.recordState = true;
             } 
+<<<<<<< HEAD
              c.makeGame(playerlogin, "PC", 1);
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
              Stage stage =(Stage)((Node)((EventObject) event).getSource()).getScene().getWindow();
              Scene scene = new Scene(root);
              stage.setScene(scene);
@@ -122,6 +134,7 @@ public class HomeController implements Initializable {
      @FXML
     private void gorecord(ActionEvent event)
     {
+<<<<<<< HEAD
         
             boolean db = true;
             
@@ -147,6 +160,10 @@ public class HomeController implements Initializable {
                  ex.printStackTrace();
                  db  = false;
             }
+=======
+       
+        try {
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
              if(Player1StepRecod.isEmpty() || Player2StepRecod.isEmpty())
              {
                  System.out.println("not record yet");
@@ -159,7 +176,10 @@ public class HomeController implements Initializable {
              }
              else
              {
+<<<<<<< HEAD
                 
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
                 FXMLLoader x = new FXMLLoader();
                 x.setLocation(getClass().getResource("FXMLDocument.fxml"));
                 Parent root = x.load();
@@ -185,10 +205,13 @@ public class HomeController implements Initializable {
              Parent root = x.load();
              FXMLDocumentController c = x.getController();
              Alert alert = new Alert(AlertType.CONFIRMATION);
+<<<<<<< HEAD
              System.out.println(id_user);
              System.out.println(playerlogin);
              c.u_id =id_user;
              c.playerName1 = playerlogin;
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
              alert.setTitle("Want To Recod The Game");
              alert.setHeaderText("Record the game to watch Later");
              alert.setContentText("Are you ok with this?");
@@ -230,12 +253,15 @@ public class HomeController implements Initializable {
          WinnerName  = W;
          //Player1StepRecod.forEach((x)->System.out.println(x));
      }
+<<<<<<< HEAD
      public void makeLogin(String user_nname,int id)
      {
          playerlogin = user_nname;
          id_user = id;
          
      }
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

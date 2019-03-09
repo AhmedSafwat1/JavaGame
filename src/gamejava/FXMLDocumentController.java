@@ -6,6 +6,7 @@
 package gamejava;
 
 
+<<<<<<< HEAD
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -17,6 +18,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+=======
+import java.io.IOException;
+import java.net.URL;
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EventObject;
@@ -25,9 +30,12 @@ import java.util.ResourceBundle;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,7 +51,10 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import javafx.util.Duration;
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
 
 /**
  *
@@ -94,12 +105,17 @@ public class FXMLDocumentController implements Initializable {
     // attribute use
     private boolean turnFlag = true;
     private boolean gameFlag = true;
+<<<<<<< HEAD
     public String playerName1 = "Name1"; 
+=======
+    private String playerName1 = "Name"; 
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     private String playerName2 = "PC"; 
     private int mode = 1;
     private boolean display =false;
     private String Winer = "No-One";
     public boolean recordState = false;
+<<<<<<< HEAD
     public int u_id;
     //test
      //connection
@@ -122,6 +138,9 @@ public class FXMLDocumentController implements Initializable {
             showAlert("Error not Connect");
         }
     }
+=======
+    //test
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     @FXML
     private void Exit(ActionEvent event)
     {
@@ -130,6 +149,7 @@ public class FXMLDocumentController implements Initializable {
              x.setLocation(getClass().getResource("Home.fxml"));
              Parent root = x.load();
              HomeController c = x.getController();
+<<<<<<< HEAD
              c.playerlogin = playerName1;
              boolean f = true;
              if(!gameFlag && recordState)
@@ -155,6 +175,11 @@ public class FXMLDocumentController implements Initializable {
                  {
                      showAlert("sava Record sucess");
                  }
+=======
+             if(!gameFlag && recordState)
+             {
+                 c.PutRecod(Player1Step, Player2Step,playerName1,playerName2,Winer);
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
              }
              else
              {
@@ -180,6 +205,7 @@ public class FXMLDocumentController implements Initializable {
      @FXML
     private void reset(ActionEvent event)
     {
+<<<<<<< HEAD
         boolean f5 = true;
         if(!gameFlag && recordState)
              {
@@ -210,13 +236,20 @@ public class FXMLDocumentController implements Initializable {
         turnFlag = true;
         gameFlag = true;
         line.setVisible(false);
+=======
+        turnFlag = true;
+        gameFlag = true;
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
         stautus.setText("Game Start "+playerName1 + " will Play X");
         btns.forEach((x)->{
             x.setText("");
             x.setDisable(false);
             
         });
+<<<<<<< HEAD
         btnsCpy = (ArrayList<Button>) btns.clone();
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
         Player1Step.clear();
         Player2Step.clear();
         again.setVisible(false);
@@ -393,6 +426,7 @@ public class FXMLDocumentController implements Initializable {
     private boolean CheckWinner(String TypePlyer)
     {
         if(b1.getText().equals(TypePlyer) && b5.getText().equals(TypePlyer) && b9.getText().equals(TypePlyer) )
+<<<<<<< HEAD
         {
             playwinAnimation(6);
             return true;
@@ -434,6 +468,23 @@ public class FXMLDocumentController implements Initializable {
             playwinAnimation(9);
             return true;
         }
+=======
+            return true;
+        else if(b3.getText().equals(TypePlyer) && b5.getText().equals(TypePlyer) && b7.getText().equals(TypePlyer) )
+            return true;
+        else if(b1.getText().equals(TypePlyer) && b2.getText().equals(TypePlyer) && b3.getText().equals(TypePlyer) )
+            return true;
+        else if(b4.getText().equals(TypePlyer) && b5.getText().equals(TypePlyer) && b6.getText().equals(TypePlyer) )
+            return true;
+        else if(b7.getText().equals(TypePlyer) && b8.getText().equals(TypePlyer) && b9.getText().equals(TypePlyer) )
+            return true;
+        else if(b1.getText().equals(TypePlyer) && b4.getText().equals(TypePlyer) && b7.getText().equals(TypePlyer) )
+            return true;
+        else if(b2.getText().equals(TypePlyer) && b5.getText().equals(TypePlyer) && b8.getText().equals(TypePlyer) )
+            return true;
+        else if(b3.getText().equals(TypePlyer) && b6.getText().equals(TypePlyer) && b9.getText().equals(TypePlyer) )
+            return true;
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
         else
             return false;
     }
@@ -442,12 +493,15 @@ public class FXMLDocumentController implements Initializable {
     {
         return(Player1Step.size() + Player2Step.size() == 9);     
     }
+<<<<<<< HEAD
    //convertVector to string
     public String conv_Vect(Vector<String> x)
     {
         
         return String.join(",", x);
     }
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     //computer player
     private void PcPlayer(String player)
     {
@@ -468,6 +522,7 @@ public class FXMLDocumentController implements Initializable {
         else
             player1(btns.get(step));
     }
+<<<<<<< HEAD
     private void playwinAnimation(int i ){
         line.setVisible(true);
         switch(i)
@@ -551,6 +606,8 @@ public class FXMLDocumentController implements Initializable {
                 break;
         }
     }
+=======
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     public void  makeGame(String player1Name,String player2Name,int _mode)
     {
         playerName1 = player1Name;
@@ -652,6 +709,7 @@ public class FXMLDocumentController implements Initializable {
         }
         new rec().start();
     }
+<<<<<<< HEAD
     private void showAlert(String Message) {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Message");
@@ -680,12 +738,19 @@ public class FXMLDocumentController implements Initializable {
             ex.printStackTrace();
          }
     }
+=======
+    
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         // handl the name 
         labelName1.setText(playerName1 + " : X");
+<<<<<<< HEAD
         //playwinAnimation(8);
+=======
+        
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
         line.setVisible(false);
         labelName1.setTextFill(Color.GREEN);
         labelName2.setText(playerName2 + " : O");

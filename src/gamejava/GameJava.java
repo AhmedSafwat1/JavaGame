@@ -21,11 +21,17 @@ public class GameJava extends Application {
     public void start(Stage stage) throws Exception {
 //        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
          FXMLLoader x = new FXMLLoader();
+<<<<<<< HEAD
         // x.setLocation(getClass().getResource("player.fxml"));
          x.setLocation(getClass().getResource("login.fxml"));
          Parent root = x.load();
         // playerController c = x.getController();
         // c.prepareConnection();
+=======
+         x.setLocation(getClass().getResource("Home.fxml"));
+         Parent root = x.load();
+//        FXMLDocumentController c = x.getController();
+>>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
        
 //        Parent root = new FXMLDocumentBase();
         Scene scene = new Scene(root);
