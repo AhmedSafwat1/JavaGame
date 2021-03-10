@@ -126,11 +126,7 @@
             <Font size="17.0" />
          </font>
       </Label>
-<<<<<<< HEAD
-      <Line fx:id="line" endX="240.0" endY="104.0" layoutX="222.0" layoutY="106.0" startX="-36.0" startY="104.0" stroke="#fcf6f6" strokeWidth="15.0" />
-=======
       <Line fx:id="line" endX="-36.0" endY="345.0" layoutX="222.0" layoutY="106.0" startX="-36.0" startY="104.0" stroke="#fcf6f6" strokeWidth="15.0" />
->>>>>>> ca8197e3316b18634fb19a00b89a96e782596add
       <Button fx:id="again" layoutX="254.0" layoutY="100.0" mnemonicParsing="false" onAction="#reset" prefHeight="32.0" prefWidth="146.0" style="-fx-background-color: #28a745; -fx-font-size: 14;" text="Play Again" visible="false" />
    </children>
 </AnchorPane>
